@@ -2,18 +2,19 @@ import { serviceData } from "@/assets/assets";
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import React, { useState } from "react";
+import Link from "next/link";
 import { motion } from "motion/react";
 
 const Services = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
+  // const openModal = () => {
+  //   setIsModalOpen(true);
+  // };
 
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
+  // const closeModal = () => {
+  //   setIsModalOpen(false);
+  // };
 
   return (
     <motion.div
@@ -55,7 +56,7 @@ const Services = () => {
         transition={{ delay: 0.9, duration: 0.6 }}
         className="grid grid-cols-auto gap-6 my-10"
       >
-        {serviceData.map(({ icon, title, description, link }, index) => (
+        {serviceData.map(({ icon, title, description, id }, index) => (
           <motion.div
             whileHover={{ scale: 1.05 }}
             key={index}
@@ -69,18 +70,19 @@ const Services = () => {
               {description}
             </p>
 
-            <button
-              onClick={() => openModal()}
+            <Link
+              // onClick={() => openModal()}
+              href={`/skills#${id}`}
               className="flex items-center gap-2 text-sm mt-5 border border-gray-400 rounded-full px-3 py-2"
             >
               Read more{" "}
               <Image alt="" src={assets.right_arrow} className="w-4" />
-            </button>
+            </Link>
           </motion.div>
         ))}
       </motion.div>
 
-      {isModalOpen && (
+      {/* {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-white dark:bg-gray-800 rounded-lg p-8 max-w-md mx-4 shadow-lg">
             <h2 className="text-2xl mb-4 font-bold text-gray-800 dark:text-white">
@@ -100,7 +102,7 @@ const Services = () => {
             </button>
           </div>
         </div>
-      )}
+      )} */}
     </motion.div>
   );
 };

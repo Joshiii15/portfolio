@@ -1,7 +1,11 @@
-import React from "react";
+"use client"; // Ensures hooks work
 
-const UserContext = React.createContext();
+import { createContext, useContext } from "react";
 
-export const UserProvider = UserContext.Provider;
+const UserContext = createContext(null);
+
+export const UserProvider = ({ value, children }) => {
+  return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
+};
 
 export default UserContext;

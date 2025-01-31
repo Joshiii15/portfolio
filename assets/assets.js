@@ -138,25 +138,25 @@ export const serviceData = [
     icon: assets.frontend,
     title: "Frontend Web Development",
     description: "Design and build responsive, visually appealing,...",
-    link: "",
+    id: "frontend",
   },
   {
     icon: assets.backend,
     title: "Backend Web Development",
     description: "Develop robust and scalable server-side...",
-    link: "",
+    id: "backend",
   },
   {
     icon: assets.fullstack,
     title: "Full-Stack Web Development",
     description: "Deliver end-to-end solutions by building dynamic,...",
-    link: "",
+    id: "fullstack",
   },
   {
     icon: assets.mlai,
     title: "Machine Learning & AI",
     description: "Implement fundamental machine learning models...",
-    link: "",
+    id: "mlai",
   },
 ];
 
@@ -210,6 +210,8 @@ export const skillsDescription = [
       assets.nextjs,
       assets.tailwind,
     ],
+    imgLink: "/frontend.gif",
+    id: "frontend",
   },
   {
     title: "Backend Web Development",
@@ -221,6 +223,8 @@ export const skillsDescription = [
       assets.logo_expressjs,
       assets.postman,
     ],
+    imgLink: "/backend.gif",
+    id: "backend",
   },
   {
     title: "Full-Stack Web Development",
@@ -232,11 +236,15 @@ export const skillsDescription = [
       assets.react_logo,
       assets.nodejs,
     ],
+    imgLink: "/fullstack.gif",
+    id: "fullstack",
   },
   {
     title: "Machine Learning & AI",
     description:
       "Implement fundamental machine learning models using supervised learning techniques and customize AI models for specialized tasks such as computer vision. Leverage pre-trained models to enhance application capabilities and solve real-world problems effectively.",
     tools: [assets.pycharm, assets.colab],
+    imgLink: "/mlai.gif",
+    id: "mlai",
   },
 ];

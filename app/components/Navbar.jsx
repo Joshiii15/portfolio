@@ -1,6 +1,9 @@
+"use client";
+
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import React, { useContext, useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import UserContext from "../UserContext";
 
 const Navbar = () => {
@@ -39,13 +42,13 @@ const Navbar = () => {
             : ""
         }`}
       >
-        <a href="#top">
+        <Link href="/#top">
           <Image
             src={isDarkMode ? assets.logo_dark : assets.logo}
             alt="navbar logo"
             className="w-28 cursor-pointer mr-14"
           />
-        </a>
+        </Link>
 
         <ul
           className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${
@@ -55,29 +58,29 @@ const Navbar = () => {
           } `}
         >
           <li>
-            <a className="font-Ovo" href="#top">
+            <Link className="font-Ovo" href="/#top">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="font-Ovo" href="#about">
+            <Link className="font-Ovo" href="/#about">
               About Me
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="font-Ovo" href="#skills">
+            <Link className="font-Ovo" href="/#skills">
               Skills
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="font-Ovo" href="#work">
+            <Link className="font-Ovo" href="/#work">
               Projects
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="font-Ovo" href="#contact">
+            <Link className="font-Ovo" href="/#contact">
               Contact Me
-            </a>
+            </Link>
           </li>
         </ul>
 
