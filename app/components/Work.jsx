@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useContext, useState } from "react";
 import { motion } from "motion/react";
 import UserContext from "../UserContext";
+import Link from "next/link";
 
 const Work = () => {
   const { isDarkMode } = useContext(UserContext);
@@ -69,34 +70,39 @@ const Work = () => {
                 <p className="text-sm text-gray-700">{project.description}</p>
               </motion.div>
               <motion.div className="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
-                <Image
-                  src={assets.send_icon}
-                  alt="send icon"
-                  className="w-5"
-                  onClick={() => openModal()}
-                />
+                <Link href="/portfolio">
+                  <Image
+                    src={assets.send_icon}
+                    alt="send icon"
+                    className="w-5"
+                  />
+                </Link>
               </motion.div>
             </motion.div>
           </motion.div>
         ))}
       </motion.div>
 
-      <motion.button
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 1.1, duration: 0.5 }}
-        onClick={() => openModal()}
-        className="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-darkHover"
-      >
-        Show more{" "}
-        <Image
-          src={
-            isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold
-          }
-          alt="right arrow"
-          className="w-4"
-        />
-      </motion.button>
+      <Link href="/portfolio">
+        <motion.button
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 1.1, duration: 0.5 }}
+          // onClick={() => openModal()}
+          className="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-darkHover"
+        >
+          Show more{" "}
+          <Image
+            src={
+              isDarkMode
+                ? assets.right_arrow_bold_dark
+                : assets.right_arrow_bold
+            }
+            alt="right arrow"
+            className="w-4"
+          />
+        </motion.button>
+      </Link>
 
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">

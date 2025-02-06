@@ -112,24 +112,83 @@ export const workData = [
     description: "Front-end Development",
     bgImage:
       "https://images.pexels.com/photos/3584998/pexels-photo-3584998.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    link: "https://github.com/Joshiii15/portfolio.git",
   },
   {
     title: "E-commerce App",
     description: "Full-stack Development",
     bgImage:
       "https://images.pexels.com/photos/6214371/pexels-photo-6214371.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    link: "",
   },
   {
     title: "Blog App",
     description: "Full-stack Development",
     bgImage:
       "https://images.pexels.com/photos/4458/cup-mug-desk-office.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    link: "",
   },
   {
     title: "Movie App",
     description: "Full-stack Development",
     bgImage:
       "https://images.pexels.com/photos/6992948/pexels-photo-6992948.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    link: "",
+  },
+];
+
+export const portfolioData = [
+  {
+    title: "Web Portfolio",
+    description:
+      "A modern and responsive portfolio website built with Next.js to showcase projects, skills, and achievements. Designed with a sleek UI and optimized for fast performance.",
+    functionalities: [
+      "Project Showcase",
+      "Responsive Design",
+      "Optimized Performance",
+    ],
+    tools: ["Next.js", "React.js", "Tailwind CSS"],
+    images: ["/portfolio1.png", "/portfolio2.png"],
+    link: "https://portfolio-joshtv.vercel.app/",
+  },
+  {
+    title: "Zuitt Tech Store",
+    description:
+      "A full-stack e-commerce web application built using the MERN stack. Try out the live demo! Please log out first, then register as a new user to explore the platform. To test admin features, log in with 'admin@mail.com' using the password 'admin123'.",
+    functionalities: [
+      "User Registration & Authentication",
+      "Product Browsing & Search",
+      "Add to Cart & Checkout",
+      "Order History & Tracking",
+      "Admin Dashboard",
+      "Admin: Add, Update & Disable Products",
+      "Admin: Manage Orders & Users",
+    ],
+    tools: ["MongoDB", "Express.js", "React.js", "Node.js", "Bootstrap"],
+    images: ["/ecom1.png", "/ecom2.png", "/ecom3.png"],
+    link: "http://zuitt-bootcamp-prod-482-8075-velasco.s3-website.us-east-1.amazonaws.com",
+  },
+  {
+    title: "Zuitt Blogs",
+    description:
+      "A full-stack blogging platform where users can create, update, and share blog posts. Try out the demo using the link below.",
+    functionalities: [
+      "User Registration & Login",
+      "Create, Update & Delete Blog Posts",
+      "Add & Manage Comments",
+      "Admin Dashboard for Content Moderation",
+    ],
+    tools: ["MongoDB", "Express.js", "React.js", "Node.js", "Bootstrap"],
+    images: ["/blog1.png", "/blog2.png", "/blog3.png"],
+    link: "https://blog-app-client-lilac.vercel.app/",
+  },
+  {
+    title: "Movie App",
+    description: "An upcoming movie browsing app. Stay tuned for updates!",
+    functionalities: [],
+    tools: [],
+    images: [],
+    link: "",
   },
 ];
 
